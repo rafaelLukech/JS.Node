@@ -1,0 +1,11 @@
+<main>
+    <h3>Seja bem vindo, {{ user.nome }}</h3>
+    <p>Você é jovem, tem apenas {{ user.idade }} anos</p>
+    <p><strong>Seu e-mail é: </strong>{{ user.email }}</p>
+
+    {{#if auth}}
+        <p><a href="/dashboard">Acessar a Dashboard</a></p>
+    {{else}}
+        <p>Usuário não autenticado</p>
+    {{/if}}
+</main>
